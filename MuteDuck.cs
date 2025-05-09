@@ -15,13 +15,13 @@ public class MuteDuck : Duck, IFlyable, IQuackable
     {
         return "...";
     }
-        public void Fly()
+        public string Fly()
     {
-        Console.Write("...");
+        return("voando...");
     }
-        public void Quack()
+        public string Quack()
     {
-        Console.Write("...");
+        return("...");
     }
 
 }

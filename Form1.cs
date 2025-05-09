@@ -20,6 +20,9 @@ namespace DuckSimulator
             ducks.Add(new MallardDuck("verde"));
             ducks.Add(new RedHeadDuck("vermelho"));
             ducks.Add(new RubberDuck("amarelo"));
+            ducks.Add(new MarrecoDuck("marrom"));
+            ducks.Add(new MuteDuck("..."));
+            ducks.Add(new CayugaDuck("verde-água"))
             InitializeComponent();
             label1.Text = ducks[index].Name;
         }

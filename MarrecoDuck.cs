@@ -17,13 +17,13 @@ public class MarrecoDuck : Duck, IFlyable, IQuackable
         return ("Sou um Marreco Duck");
     }
 
-    public void Fly()
+    public string Fly()
     {
-        Console.Write("Voagem MARRECOOOO...");
+        return("Voagem MARRECOOOO...");
     }
 
-    public void Quack()
+    public string Quack()
     {
-        Console.Write("Marrecooooquaaaa!!!!...");
+        return("Marrecooooquaaaa!!!!...");
     }
 }

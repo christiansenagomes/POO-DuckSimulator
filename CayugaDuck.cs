@@ -18,13 +18,13 @@ public class CayugaDuck : Duck, IFlyable, IQuackable
         return ("Sou um Cayuga Duck");
     }
 
-    public void Fly()
+    public string Fly()
     {
-        Console.Write("Voação CayugaAAAAaaAAAA...");
+        return("Voação CayugaAAAAaaAAAA...");
     }
 
-    public void Quack()
+    public string Quack()
     {
-        Console.Write("CAYUGAAAAAAAquaaaa!!!!...");
+        return("CAYUGAAAAAAAquaack!!!!...");
     }
 }

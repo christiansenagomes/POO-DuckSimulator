@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class RedHeadDuck : Duck, IFlyable, IQuackable
 {
-    public RedHeadDuck()
+    public RedHeadDuck(string cor) : base(cor)
     {
         Name = "RedHead Duck";
     }

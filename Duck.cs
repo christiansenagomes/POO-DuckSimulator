@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 public class Duck
 {
+    public string Name { get; set; }
     //private string Cor {  get; set; }
 
     //public Duck(string cor)
     //{
     //    //Cor = cor;
     //}
-    public void Swim()
+    public string Swim()
     {
-        Console.WriteLine("Nadando...");
+        return ("Nadando...");
     }
 
-    public virtual void Display()
+    public virtual string Display()
     {
-        Console.WriteLine("Sou um Pato.");
+        return ("Sou um Pato.");
     }
 }

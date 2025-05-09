@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 public class RedHeadDuck : Duck, IFlyable, IQuackable
 {
-    public override void Display()
+    public RedHeadDuck()
     {
-        Console.WriteLine("Sou um Red Head Duck");
+        Name = "RedHead Duck";
+    }
+    public override string Display()
+    {
+        return ("Sou um Red Head Duck");
     }
 
     public void Fly()

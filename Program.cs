@@ -1,26 +1,43 @@
-﻿public class Program
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DuckSimulator
 {
-    public static void Main()
+    internal static class Program
     {
-        Duck duck = new Duck();
-        duck.Swim();
-        duck.Display();
+        /// <summary>
+        /// Ponto de entrada principal para o aplicativo.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
 
-        RedHeadDuck redHeadDuck = new RedHeadDuck();
-        redHeadDuck.Swim();
-        redHeadDuck.Fly();
-        redHeadDuck.Quack();
-        redHeadDuck.Display();
+            //Duck duck = new Duck();
+            //duck.Swim();
+            //duck.Display();
 
-        MallardDuck mallardDuck = new MallardDuck();
-        mallardDuck.Swim();
-        mallardDuck.Fly();
-        mallardDuck.Quack();
-        mallardDuck.Display();
+            //RedHeadDuck redHeadDuck = new RedHeadDuck();
+            //redHeadDuck.Swim();
+            //redHeadDuck.Fly();
+            //redHeadDuck.Quack();
+            //redHeadDuck.Display();
 
-        RubberDuck rubberDuck = new RubberDuck();
-        rubberDuck.Swim();
-        rubberDuck.Quack();
-        rubberDuck.Display();
+            //MallardDuck mallardDuck = new MallardDuck();
+            //mallardDuck.Swim();
+            //mallardDuck.Fly();
+            //mallardDuck.Quack();
+            //mallardDuck.Display();
+
+            //RubberDuck rubberDuck = new RubberDuck();
+            //rubberDuck.Swim();
+            //rubberDuck.Quack();
+            //rubberDuck.Display();
+        }
     }
 }

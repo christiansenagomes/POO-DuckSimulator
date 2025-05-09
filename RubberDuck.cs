@@ -18,6 +18,6 @@ public class RubberDuck : Duck, IQuackable
 
     public string Quack()
     {
-        return ("quaaaa!!!!...");
+        return ("rubberquaaaa!!!!...");
     }
 }

@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 public interface IQuackable
 {
-    void Quack();
+    string Quack();
 }

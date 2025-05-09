@@ -13,9 +13,6 @@ namespace DuckSimulator
     public partial class Form2 : Form
     {
         Duck Duck;
-        MallardDuck MallardDuck;
-        RedHeadDuck RedHeadDuck;
-        RubberDuck RubberDuck;
         public Form2(Duck duck)
         {
             InitializeComponent();
@@ -50,10 +47,24 @@ namespace DuckSimulator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    //richTextBox1.Text = Duck.Fly();
-            //}
+            if (Duck is IFlyable flyableDuck)
+            {
+                richTextBox1.Text = flyableDuck.Fly();
+            } else
+            {
+                MessageBox.Show("Ação não Disponível");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (Duck is IQuackable quackableDuck)
+            {
+                richTextBox1.Text = quackableDuck.Quack();
+            } else
+            {
+                MessageBox.Show("Ação não Disponível");
+            }
         }
     }
 }

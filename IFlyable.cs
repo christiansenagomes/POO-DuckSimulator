@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 public interface IFlyable
 {
-    void Fly();
+    string Fly();
 }

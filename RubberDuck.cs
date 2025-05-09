@@ -16,8 +16,8 @@ public class RubberDuck : Duck, IQuackable
         return ("Sou um Rubber Duck");
     }
 
-    public void Quack()
+    public string Quack()
     {
-        Console.Write("quaaaa!!!!...");
+        return ("quaaaa!!!!...");
     }
 }

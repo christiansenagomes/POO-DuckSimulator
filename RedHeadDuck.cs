@@ -15,13 +15,13 @@ public class RedHeadDuck : Duck, IFlyable, IQuackable
         return ("Sou um Red Head Duck");
     }
 
-    public void Fly()
+    public string Fly()
     {
-        Console.Write("voar...");
+        return ("voar...");
     }
 
-    public void Quack()
+    public string Quack()
     {
-        Console.Write("quaaaa!!!!...");
+        return ("quaaaa!!!!...");
     }
 }

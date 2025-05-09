@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 public class RubberDuck : Duck, IQuackable
 {
-    public RubberDuck()
+    public RubberDuck(string cor) : base(cor)
     {
         Name = "Rubber Duck";
     }

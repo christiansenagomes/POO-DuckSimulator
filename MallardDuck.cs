@@ -24,6 +24,6 @@ public class MallardDuck : Duck, IFlyable, IQuackable
 
     public string Quack()
     {
-        return ("quaaaa!!!!...");
+        return ("mallardquaaaa!!!!...");
     }
 }

@@ -17,9 +17,9 @@ namespace DuckSimulator
         int index = 0;
         public Form1()
         {
-            ducks.Add(new MallardDuck());
-            ducks.Add(new RedHeadDuck());
-            ducks.Add(new RubberDuck());
+            ducks.Add(new MallardDuck("verde"));
+            ducks.Add(new RedHeadDuck("vermelho"));
+            ducks.Add(new RubberDuck("amarelo"));
             InitializeComponent();
             label1.Text = ducks[index].Name;
         }

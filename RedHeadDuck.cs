@@ -22,6 +22,6 @@ public class RedHeadDuck : Duck, IFlyable, IQuackable
 
     public string Quack()
     {
-        return ("quaaaa!!!!...");
+        return ("redheadquaaaa!!!!...");
     }
 }

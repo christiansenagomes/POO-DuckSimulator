@@ -20,16 +20,6 @@ namespace DuckSimulator
             label1.Text = Duck.Name;
         }
 
-        private void checkDuck(Duck duck)
-        {
-            switch (duck.Name)
-            {
-                case "Mallard Duck":
-                    Duck = (MallardDuck)Duck;
-                    break;
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = Duck.Display();

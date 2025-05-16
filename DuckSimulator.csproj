@@ -62,6 +62,10 @@
     </Compile>
     <Compile Include="IFlyable.cs" />
     <Compile Include="IQuackable.cs" />
+    <Compile Include="IExcavate.cs" />
+    <Compile Include="Iinvisible.cs" />
+    <Compile Include="ISpitfire.cs" />
+    <Compile Include="ISuperspeed.cs" />
     <Compile Include="MallardDuck.cs" />
     <Compile Include="MarrecoDuck.cs" />
     <Compile Include="MuteDuck.cs" />

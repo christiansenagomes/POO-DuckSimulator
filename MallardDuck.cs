@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class MallardDuck : Duck, IFlyable, IQuackable
+public class MallardDuck : Duck, IFlyable, IQuackable, ISuperspeed
 {
     public MallardDuck(string cor) : base(cor)
     {
@@ -25,5 +25,10 @@ public class MallardDuck : Duck, IFlyable, IQuackable
     public string Quack()
     {
         return ("mallardquaaaa!!!!...");
+    }
+
+     public string Speed()
+    {
+        return ("🦆💨");
     }
 }

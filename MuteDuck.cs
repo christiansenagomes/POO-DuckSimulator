@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class MuteDuck : Duck, IFlyable, IQuackable
+public class MuteDuck : Duck, IFlyable, Iinvisible
 {
     public MuteDuck(string cor) : base(cor)
     {
@@ -19,9 +19,11 @@ public class MuteDuck : Duck, IFlyable, IQuackable
     {
         return("voando...");
     }
-        public string Quack()
+    
+
+    public string Disappear ()
     {
-        return("...");
+        return "Estou Sumindo...";
     }
 
 }

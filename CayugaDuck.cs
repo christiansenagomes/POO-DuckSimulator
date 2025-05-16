@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class CayugaDuck : Duck, IFlyable, IQuackable
+public class CayugaDuck : Duck, IQuackable, IExcavate
 {
     public CayugaDuck(string cor) : base(cor)
     {
@@ -18,13 +18,13 @@ public class CayugaDuck : Duck, IFlyable, IQuackable
         return ("Sou um Cayuga Duck");
     }
 
-    public string Fly()
-    {
-        return("Voação CayugaAAAAaaAAAA...");
-    }
-
     public string Quack()
     {
         return("CAYUGAAAAAAAquaack!!!!...");
+    }
+
+    public string Dig ()
+    {
+        return("Cavandoooo...");
     }
 }

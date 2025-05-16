@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class MarrecoDuck : Duck, IFlyable, IQuackable
+public class MarrecoDuck : Duck, IFlyable, IQuackable, ISpitfire
 {
     public MarrecoDuck(string cor) : base(cor)
     {
@@ -25,5 +25,10 @@ public class MarrecoDuck : Duck, IFlyable, IQuackable
     public string Quack()
     {
         return("Marrecooooquaaaa!!!!...");
+    }
+
+     public string Spit()
+    {
+        return("🔥🔥🔥");
     }
 }

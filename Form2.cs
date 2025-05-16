@@ -12,17 +12,18 @@ namespace DuckSimulator
 {
     public partial class Form2 : Form
     {
-        Duck Duck;
+        Duck _Duck;
         public Form2(Duck duck)
         {
+            _Duck = duck;
+
             InitializeComponent();
-            Duck = duck;
-            label1.Text = Duck.Name;
+            label1.Text = _Duck.Name;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = Duck.Display();
+            richTextBox1.Text = _Duck.Display();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -32,12 +33,12 @@ namespace DuckSimulator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = Duck.Swim();
+            richTextBox1.Text = _Duck.Swim();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Duck is IFlyable flyableDuck)
+            if (_Duck is IFlyable flyableDuck)
             {
                 richTextBox1.Text = flyableDuck.Fly();
             } else
@@ -48,7 +49,7 @@ namespace DuckSimulator
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (Duck is IQuackable quackableDuck)
+            if (_Duck is IQuackable quackableDuck)
             {
                 richTextBox1.Text = quackableDuck.Quack();
             } else

@@ -23,7 +23,7 @@ public class MuteDuck : Duck, IFlyable, Iinvisible
 
     public string Disappear ()
     {
-        return "Estou Sumindo...";
+        return "...";
     }
 
 }

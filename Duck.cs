@@ -20,6 +20,6 @@ public class Duck
 
     public virtual string Display()
     {
-        return ("Sou um Pato.");
+        return ($"Sou um Pato de cor {Cor}.");
     }
 }

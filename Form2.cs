@@ -19,24 +19,24 @@ namespace DuckSimulator
             _Duck = duck;
 
             InitializeComponent();
-            label1.Text = _Duck.Name;
+            nomePato.Text = _Duck.Name;
 
             hideUnusedButtons();
         }
 
         private void hideUnusedButtons()
         {
-            if (!(_Duck is IFlyable flyableDuck)) this.button3.Hide();
-            if (!(_Duck is IQuackable quackableDuck)) this.button4.Hide();
-            if (!(_Duck is Iinvisible invisibilityDuck)) this.button5.Hide();
-            if (!(_Duck is ISpitfire spitterDuck)) this.button6.Hide();
-            if (!(_Duck is ISuperspeed fastDuck)) this.button7.Hide();
-            if (!(_Duck is IExcavate excavatorDuck)) this.button8.Hide();
+            if (!(_Duck is IFlyable flyableDuck)) this.flyButton.Hide();
+            if (!(_Duck is IQuackable quackableDuck)) this.quackButton.Hide();
+            if (!(_Duck is Iinvisible invisibilityDuck)) this.invisibleButton.Hide();
+            if (!(_Duck is ISpitfire spitterDuck)) this.spitfireButton.Hide();
+            if (!(_Duck is ISuperspeed fastDuck)) this.speedButton.Hide();
+            if (!(_Duck is IExcavate excavatorDuck)) this.excavateButton.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void displayBtn_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = _Duck.Display();
+            actionTextbox.Text = _Duck.Display();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -44,38 +44,38 @@ namespace DuckSimulator
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void swimBtn_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = _Duck.Swim();
+            actionTextbox.Text = _Duck.Swim();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void flyBtn_Click(object sender, EventArgs e)
         {
             if (_Duck is IFlyable flyableDuck)
             {
-                richTextBox1.Text = flyableDuck.Fly();
+                actionTextbox.Text = flyableDuck.Fly();
             } else
             {
                 MessageBox.Show("Ação não Disponível");
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void quackBtn_Click(object sender, EventArgs e)
         {
             if (_Duck is IQuackable quackableDuck)
             {
-                richTextBox1.Text = quackableDuck.Quack();
+                actionTextbox.Text = quackableDuck.Quack();
             } else
             {
                 MessageBox.Show("Ação não Disponível");
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void invisibleBtn_Click(object sender, EventArgs e)
         {
             if (_Duck is Iinvisible invisibleDuck)
             {
-                richTextBox1.Text = invisibleDuck.Disappear();
+                actionTextbox.Text = invisibleDuck.Disappear();
             }
             else
             {
@@ -83,11 +83,11 @@ namespace DuckSimulator
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void spitfireBtn_Click(object sender, EventArgs e)
         {
             if (_Duck is ISpitfire spitterDuck)
             {
-                richTextBox1.Text = spitterDuck.Spit();
+                actionTextbox.Text = spitterDuck.Spit();
             }
             else
             {
@@ -95,11 +95,11 @@ namespace DuckSimulator
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void speedBtn_Click(object sender, EventArgs e)
         {
             if (_Duck is ISuperspeed fastDuck)
             {
-                richTextBox1.Text = fastDuck.Speed();
+                actionTextbox.Text = fastDuck.Speed();
             }
             else
             {
@@ -107,11 +107,11 @@ namespace DuckSimulator
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void excavateBtn_Click(object sender, EventArgs e)
         {
             if (_Duck is IExcavate excavatorDuck)
             {
-                richTextBox1.Text = excavatorDuck.Dig();
+                actionTextbox.Text = excavatorDuck.Dig();
             }
             else
             {

@@ -29,8 +29,9 @@ namespace DuckSimulator
 
             InitializeComponent();
 
-            label1.Text = ducks[index].Name;
+            nomePato.Text = ducks[index].Name;
             ShowActions(ducks[index]);
+            HideArrowButton();
         }
 
         private void ShowActions(Duck duck)
@@ -44,7 +45,7 @@ namespace DuckSimulator
                 labelAcao.AutoSize = true;
                 labelAcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.0F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 labelAcao.Location = new System.Drawing.Point(LabelCoords[0], LabelCoords[1] + (20 * i));
-                labelAcao.Name = "label1";
+                labelAcao.Name = "labelAcaoPato";
                 labelAcao.Size = new System.Drawing.Size(93, 33);
                 labelAcao.TabIndex = 1;
                 labelAcao.Text = actions[i];
@@ -63,6 +64,19 @@ namespace DuckSimulator
             acoesLabel.Clear();
         }
 
+        private void HideArrowButton()
+        {
+            if (index == ducks.Count - 1)
+            {
+                arrowRight.Visible = false;
+            }
+
+            if (index == 0)
+            {
+                arrowLeft.Visible = false;
+            }
+        }
+
         private List<string> GetDuckActions(Duck duck)
         {
             List<string> actions = new List<string>();
@@ -77,35 +91,44 @@ namespace DuckSimulator
             return actions;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void arrowRight_Click(object sender, EventArgs e)
         {
             if(index < ducks.Count - 1)
             {
                 index++;
+                HideArrowButton();
             }
-            label1.Text = ducks[index].Name;
+
+            if (index == 1)
+            {
+                arrowLeft.Visible = true;
+            }
+            
+            nomePato.Text = ducks[index].Name;
             ShowActions(ducks[index]);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void arrowLeft_Click(object sender, EventArgs e)
         {
             if (index > 0)
             {
                 index--;
+                HideArrowButton();
             }
-            label1.Text = ducks[index].Name;
+
+            if(index == ducks.Count - 2)
+            {
+                arrowRight.Visible = true;
+            }
+
+            nomePato.Text = ducks[index].Name;
             ShowActions(ducks[index]);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void selectDuck_Click(object sender, EventArgs e)
         {
-            Form form2 = new Form2(ducks[index]);
-            form2.ShowDialog();
+            Form formDuckActions = new Form2(ducks[index]);
+            formDuckActions.ShowDialog();
         }
     }
 }

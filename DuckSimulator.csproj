@@ -66,6 +66,7 @@
     <Compile Include="Iinvisible.cs" />
     <Compile Include="ISpitfire.cs" />
     <Compile Include="ISuperspeed.cs" />
+    <Compile Include="Lake.cs" />
     <Compile Include="MallardDuck.cs" />
     <Compile Include="MarrecoDuck.cs" />
     <Compile Include="MuteDuck.cs" />

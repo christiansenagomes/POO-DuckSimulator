@@ -13,20 +13,13 @@ namespace DuckSimulator
 {
     public partial class Form1 : Form
     {
-        List<Duck> ducks = new List<Duck>();
+        List<Duck> ducks = Lake.GetInstance().GetDucks();
         List<Label> acoesLabel = new List<Label>();
         private int[] LabelCoords = { 340, 177 };
 
         int index = 0;
         public Form1()
         {
-            ducks.Add(new MallardDuck("verde"));
-            ducks.Add(new RedHeadDuck("vermelho"));
-            ducks.Add(new RubberDuck("amarelo"));
-            ducks.Add(new MarrecoDuck("marrom"));
-            ducks.Add(new MuteDuck("..."));
-            ducks.Add(new CayugaDuck("verde-água"));
-
             InitializeComponent();
 
             nomePato.Text = ducks[index].Name;

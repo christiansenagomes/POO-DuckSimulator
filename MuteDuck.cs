@@ -13,17 +13,20 @@ public class MuteDuck : Duck, IFlyable, Iinvisible
 
     public override string Display()
     {
-        return "...";
+        string afraidStr = Afraid ? "..........." : "";
+        return "..." + afraidStr;
     }
-        public string Fly()
+    public string Fly()
     {
-        return("voando...");
+        string afraidStr = Afraid ? " ... ..." : "";
+        return ("voando..." + afraidStr);
     }
     
 
     public string Disappear ()
     {
-        return "...";
+        string afraidStr = Afraid ? " :)" : "";
+        return "..." + afraidStr;
     }
 
 }

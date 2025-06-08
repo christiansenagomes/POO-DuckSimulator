@@ -40,6 +40,7 @@ namespace DuckSimulator
             this.spitfireButton = new System.Windows.Forms.Button();
             this.speedButton = new System.Windows.Forms.Button();
             this.excavateButton = new System.Windows.Forms.Button();
+            this.monsterButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // actionTextbox
@@ -142,11 +143,22 @@ namespace DuckSimulator
             this.excavateButton.UseVisualStyleBackColor = true;
             this.excavateButton.Click += new System.EventHandler(this.excavateBtn_Click);
             // 
+            // monsterButton
+            // 
+            this.monsterButton.Location = new System.Drawing.Point(300, 415);
+            this.monsterButton.Name = "monsterButton";
+            this.monsterButton.Size = new System.Drawing.Size(144, 23);
+            this.monsterButton.TabIndex = 10;
+            this.monsterButton.Text = "Monstro no lago!!";
+            this.monsterButton.UseVisualStyleBackColor = true;
+            this.monsterButton.Click += new System.EventHandler(this.monsterButton_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.monsterButton);
             this.Controls.Add(this.excavateButton);
             this.Controls.Add(this.speedButton);
             this.Controls.Add(this.spitfireButton);
@@ -176,5 +188,6 @@ namespace DuckSimulator
         private System.Windows.Forms.Button spitfireButton;
         private System.Windows.Forms.Button speedButton;
         private Button excavateButton;
+        private Button monsterButton;
     }
 }

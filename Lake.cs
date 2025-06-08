@@ -43,4 +43,12 @@ public class Lake
     {
         return Ducks;
     }
+
+    public void Notify(bool active)
+    {
+        for(int i = 0; i < Ducks.Count; i++)
+        {
+            Ducks[i].Update(active);
+        }
+    }
 }

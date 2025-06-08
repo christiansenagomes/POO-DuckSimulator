@@ -14,12 +14,14 @@ public class MallardDuck : Duck, IFlyable, IQuackable, ISuperspeed
     }
     public override string Display()
     {
-        return ("Sou um Mallard Duck");
+        string afraidStr = Afraid ? " com medo" : "";
+        return ("Sou um Mallard Duck" + afraidStr);
     }
 
     public string Fly()
     {
-        return ("voar...");
+        string afraidStr = Afraid ? "pra longe daqui" : "";
+        return ("voar..." + afraidStr);
     }
 
     public string Quack()
@@ -29,6 +31,7 @@ public class MallardDuck : Duck, IFlyable, IQuackable, ISuperspeed
 
      public string Speed()
     {
-        return ("🦆💨");
+        string afraidStr = Afraid ? "💨💨💨💨💨💨💨💨💨💨💨💨💨" : "";
+        return ("🦆💨" + afraidStr);
     }
 }

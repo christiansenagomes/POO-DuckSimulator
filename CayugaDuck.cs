@@ -15,7 +15,8 @@ public class CayugaDuck : Duck, IQuackable, IExcavate
    
     public override string Display()
     {
-        return ("Sou um Cayuga Duck");
+        string afraidStr = Afraid ? " que está com muito medo" : "";
+        return ("Sou um Cayuga Duck" + afraidStr);
     }
 
     public string Quack()
@@ -25,6 +26,7 @@ public class CayugaDuck : Duck, IQuackable, IExcavate
 
     public string Dig ()
     {
-        return("Cavandoooo...");
+        string afraidStr = Afraid ? "pra esconder, to morrendo de medo" : "";
+        return ("Cavandoooo..." + afraidStr);
     }
 }

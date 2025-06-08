@@ -123,5 +123,10 @@ namespace DuckSimulator
             Form formDuckActions = new Form2(ducks[index]);
             formDuckActions.ShowDialog();
         }
+
+        private void monsterBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,12 +14,14 @@ public class MarrecoDuck : Duck, IFlyable, IQuackable, ISpitfire
    
     public override string Display()
     {
-        return ("Sou um Marreco Duck");
+        string afraidStr = Afraid ? " e to com medo demais slc" : "";
+        return ("Sou um Marreco Duck" + afraidStr);
     }
 
     public string Fly()
     {
-        return("Voagem MARRECOOOO...");
+        string afraidStr = Afraid ? "pra longe daqui" : "";
+        return ("Voagem MARRECOOOO..." + afraidStr);
     }
 
     public string Quack()
@@ -29,6 +31,7 @@ public class MarrecoDuck : Duck, IFlyable, IQuackable, ISpitfire
 
      public string Spit()
     {
-        return("🔥🔥🔥");
+        string afraidStr = Afraid ? "🔥🔥🔥🔥🔥🔥" : "";
+        return ("🔥🔥🔥" + afraidStr);
     }
 }

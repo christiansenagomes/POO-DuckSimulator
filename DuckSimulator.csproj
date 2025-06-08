@@ -65,6 +65,7 @@
     <Compile Include="IExcavate.cs" />
     <Compile Include="Iinvisible.cs" />
     <Compile Include="ISpitfire.cs" />
+    <Compile Include="ISubscriber.cs" />
     <Compile Include="ISuperspeed.cs" />
     <Compile Include="Lake.cs" />
     <Compile Include="MallardDuck.cs" />

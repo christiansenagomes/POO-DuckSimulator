@@ -12,11 +12,13 @@ public class RedHeadDuck : Duck, IFlyable, IQuackable
     }
     public override string Display()
     {
-        return ("Sou um Red Head Duck");
+        string afraidStr = Afraid ? " com bastante medo" : "";
+        return ("Sou um Red Head Duck" + afraidStr);
     }
 
     public string Fly()
     {
+        string afraidStr = Afraid ? "pra longe daqui" : "";
         return ("voar...");
     }
 

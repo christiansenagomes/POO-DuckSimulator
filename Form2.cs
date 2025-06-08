@@ -21,6 +21,11 @@ namespace DuckSimulator
             InitializeComponent();
             nomePato.Text = _Duck.Name;
 
+            if(_Duck.Afraid)
+            {
+                monsterButton.Text = "Monstro vai embora";
+            }
+
             hideUnusedButtons();
         }
 
@@ -116,6 +121,19 @@ namespace DuckSimulator
             else
             {
                 MessageBox.Show("Ação não Disponível");
+            }
+        }
+
+        private void monsterButton_Click(object sender, EventArgs e)
+        {
+            Lake.GetInstance().Notify(!_Duck.Afraid);
+            if(_Duck.Afraid)
+            {
+                monsterButton.Text = "Monstro vai embora";
+            }
+            else
+            {
+                monsterButton.Text = "Monstro no lago!!";
             }
         }
     }

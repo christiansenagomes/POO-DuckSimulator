@@ -13,7 +13,8 @@ public class RubberDuck : Duck, IQuackable
     }
     public override string Display()
     {
-        return ("Sou um Rubber Duck");
+        string afraidStr = Afraid ? "que está com medo" : "";
+        return ("Sou um Rubber Duck" + afraidStr);
     }
 
     public string Quack()

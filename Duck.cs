@@ -17,14 +17,14 @@ public class Duck : ISubscriber
     }
     public string Swim()
     {
-        string afraidStr = Afraid ? "lentamente pois estou com medo" : "";
-        return ("Nadando...");
+        string afraidStr = Afraid ? " lentamente pois estou com medo" : "";
+        return ("Nadando..." + afraidStr);
     }
 
     public virtual string Display()
     {
-        string afraidStr = Afraid ? "que está com medo" : "";
-        return ($"Sou um Pato de cor {Cor}.");
+        string afraidStr = Afraid ? " que está com medo" : "";
+        return ($"Sou um Pato de cor {Cor}." + afraidStr);
     }
 
     public void Update(bool danger)

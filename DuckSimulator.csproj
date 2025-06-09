@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CayugaDuck.cs" />
     <Compile Include="Duck.cs" />
+    <Compile Include="DuckFactory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

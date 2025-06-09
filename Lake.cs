@@ -7,19 +7,22 @@ using System.Threading.Tasks;
 public class Lake
 {
     private static Lake instance = null;
+    private DuckFactory duckFactory = null;
 
     private List<Duck> Ducks;
 
     private Lake()
     {
+        duckFactory = new DuckFactory();
+
         // Inserindo Patos Pré-definidos
         List<Duck> _ducks = new List<Duck>();
-        _ducks.Add(new MallardDuck("verde"));
-        _ducks.Add(new RedHeadDuck("vermelho"));
-        _ducks.Add(new RubberDuck("amarelo"));
-        _ducks.Add(new MarrecoDuck("marrom"));
-        _ducks.Add(new MuteDuck("..."));
-        _ducks.Add(new CayugaDuck("verde-água"));
+        _ducks.Add(duckFactory.CreateDuck(DuckType.Mallard, "verde"));
+        _ducks.Add(duckFactory.CreateDuck(DuckType.RedHead, "vermelho"));
+        _ducks.Add(duckFactory.CreateDuck(DuckType.Rubber, "amarelo"));
+        _ducks.Add(duckFactory.CreateDuck(DuckType.Marreco, "marrom"));
+        _ducks.Add(duckFactory.CreateDuck(DuckType.Mute, "..."));
+        _ducks.Add(duckFactory.CreateDuck(DuckType.Cayuga, "verde-água"));
 
         SetDucks(_ducks);
     }

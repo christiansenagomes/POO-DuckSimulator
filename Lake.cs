@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 public class Lake
 {
     private static Lake instance = null;
-    private DuckFactory duckFactory = null;
+    private IDuckFactory duckFactory = null;
 
     private List<Duck> Ducks;
 
